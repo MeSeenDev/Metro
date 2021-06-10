@@ -121,10 +121,10 @@ open class AbsMusicServiceFragment(@LayoutRes layout: Int) : Fragment(layout),
         return "-"
     }
 
-    private fun getMimeType(url: String): String? {
+    private fun getMimeType(url: String): String {
         var type: String? = MimeTypeMap.getFileExtensionFromUrl(
-            URLEncoder.encode(url, "utf-8")
-        ).toUpperCase(Locale.getDefault())
+                URLEncoder.encode(url, "utf-8")
+            ).uppercase(Locale.getDefault())
         if (type == null) {
             type = url.substring(url.lastIndexOf(".") + 1)
         }

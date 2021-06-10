@@ -31,8 +31,9 @@ abstract class AbsMainActivityFragment(@LayoutRes layout: Int) : AbsMusicService
     val mainActivity: MainActivity
         get() = activity as MainActivity
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
         mainActivity.setNavigationbarColorAuto()
         mainActivity.setLightNavigationBar(true)

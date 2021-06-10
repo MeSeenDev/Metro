@@ -15,6 +15,7 @@
 package io.github.muntashirakon.music.fragments.albums
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.FragmentNavigatorExtras
@@ -34,6 +35,7 @@ import io.github.muntashirakon.music.util.RetroColorUtil
 import io.github.muntashirakon.music.util.RetroUtil
 import com.afollestad.materialcab.MaterialCab
 import com.google.android.material.transition.MaterialElevationScale
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class AlbumsFragment : AbsRecyclerViewCustomGridSizeFragment<AlbumAdapter, GridLayoutManager>(),
     IAlbumClickListener, ICabHolder {

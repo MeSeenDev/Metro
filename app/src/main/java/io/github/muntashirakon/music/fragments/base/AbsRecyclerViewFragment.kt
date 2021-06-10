@@ -19,6 +19,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import android.widget.LinearLayout
 import androidx.annotation.NonNull
 import androidx.annotation.StringRes
 import androidx.core.text.HtmlCompat
@@ -49,12 +50,14 @@ abstract class AbsRecyclerViewFragment<A : RecyclerView.Adapter<*>, LM : Recycle
         setHasOptionsMenu(true)
     }
 
+    private lateinit var empties: LinearLayout
     protected var adapter: A? = null
     protected var layoutManager: LM? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        empties = view.findViewById(R.id.empty)
         postponeEnterTransition()
         view.doOnPreDraw { startPostponedEnterTransition() }
 
@@ -111,7 +114,10 @@ abstract class AbsRecyclerViewFragment<A : RecyclerView.Adapter<*>, LM : Recycle
 
     private fun checkIsEmpty() {
         emptyText.setText(emptyMessage)
-        empty.visibility = if (adapter!!.itemCount == 0) View.VISIBLE else View.GONE
+        adapter?.itemCount.let {
+            empties.visibility = if (it == 0) View.VISIBLE else View.GONE
+        }
+    // todo move to binding
     }
 
     private fun checkForPadding() {
