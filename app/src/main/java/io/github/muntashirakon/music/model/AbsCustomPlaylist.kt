@@ -1,8 +1,8 @@
 package io.github.muntashirakon.music.model
 
-import io.github.muntashirakon.music.repository.LastAddedRepository
-import io.github.muntashirakon.music.repository.SongRepository
-import io.github.muntashirakon.music.repository.TopPlayedRepository
+import io.github.muntashirakon.music.data.repository.LastAddedRepository
+import io.github.muntashirakon.music.data.repository.SongRepository
+import io.github.muntashirakon.music.data.repository.TopPlayedRepository
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 

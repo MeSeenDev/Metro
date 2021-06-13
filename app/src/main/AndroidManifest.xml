@@ -32,7 +32,7 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:targetApi="q">
         <activity
-            android:name=".activities.MainActivity"
+            android:name="io.github.muntashirakon.music.ui.activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -105,19 +105,19 @@
                 <data android:mimeType="vnd.android.cursor.dir/audio" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.PlayingQueueActivity" />
-        <activity android:name=".activities.SettingsActivity" />
-        <activity android:name=".activities.tageditor.AlbumTagEditorActivity" />
-        <activity android:name=".activities.tageditor.SongTagEditorActivity" />
-        <activity android:name=".activities.LyricsActivity" />
-        <activity android:name=".activities.UserInfoActivity" />
-        <activity android:name=".activities.LicenseActivity" />
-        <activity android:name=".activities.WhatsNewActivity" />
-        <activity android:name=".activities.bugreport.BugReportActivity" />
-        <activity android:name=".activities.ShareInstagramStory" />
-        <activity android:name=".activities.DriveModeActivity" />
-        <activity android:name=".activities.PermissionActivity" />
-        <activity android:name=".activities.LockScreenActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.PlayingQueueActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.SettingsActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.tageditor.AlbumTagEditorActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.tageditor.SongTagEditorActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.LyricsActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.UserInfoActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.LicenseActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.WhatsNewActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.bugreport.BugReportActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.ShareInstagramStory" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.DriveModeActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.PermissionActivity" />
+        <activity android:name="io.github.muntashirakon.music.ui.activities.LockScreenActivity" />
 
         <activity
             android:name=".appshortcuts.AppShortcutLauncherActivity"
@@ -125,7 +125,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <activity
-            android:name=".activities.saf.SAFGuideActivity"
+            android:name="io.github.muntashirakon.music.ui.activities.saf.SAFGuideActivity"
             android:theme="@style/Theme.Intro" />
 
         <provider
@@ -155,7 +155,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".appwidgets.BootReceiver">
+        <receiver android:name="io.github.muntashirakon.music.ui.appwidgets.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
@@ -163,7 +163,7 @@
         </receiver>
 
         <receiver
-            android:name=".appwidgets.AppWidgetBig"
+            android:name="io.github.muntashirakon.music.ui.appwidgets.AppWidgetBig"
             android:exported="false"
             android:label="@string/app_widget_big_name">
             <intent-filter>
@@ -176,7 +176,7 @@
         </receiver>
 
         <receiver
-            android:name=".appwidgets.AppWidgetClassic"
+            android:name="io.github.muntashirakon.music.ui.appwidgets.AppWidgetClassic"
             android:exported="false"
             android:label="@string/app_widget_classic_name">
             <intent-filter>
@@ -188,7 +188,7 @@
                 android:resource="@xml/app_widget_classic_info" />
         </receiver>
         <receiver
-            android:name=".appwidgets.AppWidgetSmall"
+            android:name="io.github.muntashirakon.music.ui.appwidgets.AppWidgetSmall"
             android:exported="false"
             android:label="@string/app_widget_small_name">
             <intent-filter>
@@ -200,7 +200,7 @@
                 android:resource="@xml/app_widget_small_info" />
         </receiver>
         <receiver
-            android:name=".appwidgets.AppWidgetText"
+            android:name="io.github.muntashirakon.music.ui.appwidgets.AppWidgetText"
             android:exported="false"
             android:label="@string/app_widget_text_name">
             <intent-filter>
@@ -212,7 +212,7 @@
                 android:resource="@xml/app_widget_text" />
         </receiver>
         <receiver
-            android:name=".appwidgets.AppWidgetCard"
+            android:name="io.github.muntashirakon.music.ui.appwidgets.AppWidgetCard"
             android:exported="false"
             android:label="@string/app_widget_card_name">
             <intent-filter>

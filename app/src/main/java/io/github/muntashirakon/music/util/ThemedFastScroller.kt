@@ -18,7 +18,7 @@ import code.name.monkey.appthemehelper.ThemeStore.Companion.accentColor
 import code.name.monkey.appthemehelper.util.ColorUtil.isColorLight
 import code.name.monkey.appthemehelper.util.MaterialValueHelper.getPrimaryTextColor
 import code.name.monkey.appthemehelper.util.TintHelper
-import io.github.muntashirakon.music.views.PopupBackground
+import io.github.muntashirakon.music.ui.views.PopupBackground
 import me.zhanghai.android.fastscroll.FastScroller
 import me.zhanghai.android.fastscroll.FastScrollerBuilder
 import me.zhanghai.android.fastscroll.PopupStyles

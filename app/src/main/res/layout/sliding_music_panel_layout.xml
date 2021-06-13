@@ -35,14 +35,14 @@
 
         <fragment
             android:id="@+id/miniPlayerFragment"
-            android:name="io.github.muntashirakon.music.fragments.MiniPlayerFragment"
+            android:name="io.github.muntashirakon.music.ui.fragments.MiniPlayerFragment"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             tools:layout="@layout/fragment_mini_player" />
 
     </FrameLayout>
 
-    <io.github.muntashirakon.music.views.BottomNavigationBarTinted
+    <io.github.muntashirakon.music.ui.views.BottomNavigationBarTinted
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="56dp"

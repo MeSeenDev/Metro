@@ -15,11 +15,6 @@
 package io.github.muntashirakon.music.glide.artistimage
 
 import android.content.Context
-import io.github.muntashirakon.music.model.Artist
-import io.github.muntashirakon.music.model.Data
-import io.github.muntashirakon.music.network.DeezerService
-import io.github.muntashirakon.music.util.MusicUtil
-import io.github.muntashirakon.music.util.PreferenceUtil
 import com.bumptech.glide.Priority
 import com.bumptech.glide.integration.okhttp3.OkHttpUrlLoader
 import com.bumptech.glide.load.data.DataFetcher
@@ -28,12 +23,17 @@ import com.bumptech.glide.load.model.GlideUrl
 import com.bumptech.glide.load.model.ModelLoader
 import com.bumptech.glide.load.model.ModelLoaderFactory
 import com.bumptech.glide.load.model.stream.StreamModelLoader
-import java.io.IOException
-import java.io.InputStream
-import java.util.concurrent.TimeUnit
+import io.github.muntashirakon.music.data.network.DeezerService
+import io.github.muntashirakon.music.model.Artist
+import io.github.muntashirakon.music.model.Data
+import io.github.muntashirakon.music.util.MusicUtil
+import io.github.muntashirakon.music.util.PreferenceUtil
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import java.io.IOException
+import java.io.InputStream
+import java.util.concurrent.TimeUnit
 
 class ArtistImage(val artist: Artist)
 

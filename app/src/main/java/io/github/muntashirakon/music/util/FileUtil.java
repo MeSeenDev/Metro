@@ -19,11 +19,10 @@ import android.database.Cursor;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.webkit.MimeTypeMap;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import io.github.muntashirakon.music.model.Song;
-import io.github.muntashirakon.music.repository.RealSongRepository;
-import io.github.muntashirakon.music.repository.SortedCursor;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -37,9 +36,14 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import io.github.muntashirakon.music.data.repository.RealSongRepository;
+import io.github.muntashirakon.music.data.repository.SortedCursor;
+import io.github.muntashirakon.music.model.Song;
+
 public final class FileUtil {
 
-  private FileUtil() {}
+  private FileUtil() {
+  }
 
   public static byte[] readBytes(InputStream stream) throws IOException {
     ByteArrayOutputStream baos = new ByteArrayOutputStream();

@@ -18,11 +18,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.media.session.MediaSessionCompat
-import io.github.muntashirakon.music.helper.MusicPlayerRemote
-import io.github.muntashirakon.music.helper.MusicPlayerRemote.cycleRepeatMode
 import io.github.muntashirakon.music.model.Song
 import io.github.muntashirakon.music.service.MusicService.*
 import io.github.muntashirakon.music.util.MusicUtil
+import io.github.muntashirakon.music.util.helper.MusicPlayerRemote
+import io.github.muntashirakon.music.util.helper.MusicPlayerRemote.cycleRepeatMode
 import java.util.*
 
 

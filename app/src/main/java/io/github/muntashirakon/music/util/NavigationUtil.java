@@ -27,14 +27,14 @@ import androidx.core.app.ActivityCompat;
 import org.jetbrains.annotations.NotNull;
 
 import io.github.muntashirakon.music.R;
-import io.github.muntashirakon.music.activities.DriveModeActivity;
-import io.github.muntashirakon.music.activities.LicenseActivity;
-import io.github.muntashirakon.music.activities.LyricsActivity;
-import io.github.muntashirakon.music.activities.PlayingQueueActivity;
-import io.github.muntashirakon.music.activities.UserInfoActivity;
-import io.github.muntashirakon.music.activities.WhatsNewActivity;
-import io.github.muntashirakon.music.activities.bugreport.BugReportActivity;
-import io.github.muntashirakon.music.helper.MusicPlayerRemote;
+import io.github.muntashirakon.music.ui.activities.DriveModeActivity;
+import io.github.muntashirakon.music.ui.activities.LicenseActivity;
+import io.github.muntashirakon.music.ui.activities.LyricsActivity;
+import io.github.muntashirakon.music.ui.activities.PlayingQueueActivity;
+import io.github.muntashirakon.music.ui.activities.UserInfoActivity;
+import io.github.muntashirakon.music.ui.activities.WhatsNewActivity;
+import io.github.muntashirakon.music.ui.activities.bugreport.BugReportActivity;
+import io.github.muntashirakon.music.util.helper.MusicPlayerRemote;
 
 public class NavigationUtil {
 

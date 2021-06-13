@@ -21,11 +21,11 @@ import android.graphics.Paint
 import android.os.Build
 import android.renderscript.*
 import androidx.annotation.FloatRange
-import io.github.muntashirakon.music.BuildConfig
-import io.github.muntashirakon.music.helper.StackBlur
-import io.github.muntashirakon.music.util.ImageUtil
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation
+import io.github.muntashirakon.music.BuildConfig
+import io.github.muntashirakon.music.util.ImageUtil
+import io.github.muntashirakon.music.util.helper.StackBlur
 
 class BlurTransformation : BitmapTransformation {
 

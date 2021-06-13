@@ -14,8 +14,6 @@
 
 package io.github.muntashirakon.music.util;
 
-import static android.provider.MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI;
-
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -25,18 +23,23 @@ import android.os.Environment;
 import android.provider.BaseColumns;
 import android.provider.MediaStore;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import io.github.muntashirakon.music.R;
-import io.github.muntashirakon.music.db.PlaylistWithSongs;
-import io.github.muntashirakon.music.helper.M3UWriter;
-import io.github.muntashirakon.music.model.Playlist;
-import io.github.muntashirakon.music.model.PlaylistSong;
-import io.github.muntashirakon.music.model.Song;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.github.muntashirakon.music.R;
+import io.github.muntashirakon.music.data.db.PlaylistWithSongs;
+import io.github.muntashirakon.music.model.Playlist;
+import io.github.muntashirakon.music.model.PlaylistSong;
+import io.github.muntashirakon.music.model.Song;
+import io.github.muntashirakon.music.util.helper.M3UWriter;
+
+import static android.provider.MediaStore.Audio.Playlists.EXTERNAL_CONTENT_URI;
 
 public class PlaylistsUtil {
 
@@ -45,8 +48,8 @@ public class PlaylistsUtil {
     if (name != null && name.length() > 0) {
       try {
         Cursor cursor =
-            context
-                .getContentResolver()
+                context
+                        .getContentResolver()
                 .query(
                     EXTERNAL_CONTENT_URI,
                     new String[] {MediaStore.Audio.Playlists._ID},

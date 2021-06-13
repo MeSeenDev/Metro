@@ -26,21 +26,21 @@ import androidx.core.app.NotificationCompat
 import code.name.monkey.appthemehelper.util.ATHUtil.resolveColor
 import code.name.monkey.appthemehelper.util.ColorUtil
 import code.name.monkey.appthemehelper.util.MaterialValueHelper
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.animation.GlideAnimation
+import com.bumptech.glide.request.target.SimpleTarget
+import com.bumptech.glide.request.target.Target
 import io.github.muntashirakon.music.R
-import io.github.muntashirakon.music.activities.MainActivity
 import io.github.muntashirakon.music.glide.SongGlideRequest
 import io.github.muntashirakon.music.glide.palette.BitmapPaletteWrapper
 import io.github.muntashirakon.music.model.Song
 import io.github.muntashirakon.music.service.MusicService
 import io.github.muntashirakon.music.service.MusicService.*
+import io.github.muntashirakon.music.ui.activities.MainActivity
 import io.github.muntashirakon.music.util.PreferenceUtil
 import io.github.muntashirakon.music.util.RetroUtil
 import io.github.muntashirakon.music.util.RetroUtil.createBitmap
 import io.github.muntashirakon.music.util.color.MediaNotificationProcessor
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.animation.GlideAnimation
-import com.bumptech.glide.request.target.SimpleTarget
-import com.bumptech.glide.request.target.Target
 
 /**
  * @author Hemanth S (h4h13).

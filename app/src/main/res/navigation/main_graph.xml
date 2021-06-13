@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/genreDetailsFragment"
-        android:name="io.github.muntashirakon.music.fragments.genres.GenreDetailsFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.genres.GenreDetailsFragment"
         android:label="GenreDetailsFragment"
         tools:layout="@layout/fragment_playlist_detail">
         <argument
@@ -16,17 +16,17 @@
 
     <fragment
         android:id="@+id/playlistDetailsFragment"
-        android:name="io.github.muntashirakon.music.fragments.playlists.PlaylistDetailsFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.playlists.PlaylistDetailsFragment"
         android:label="PlaylistDetailsFragment"
         tools:layout="@layout/fragment_playlist_detail">
         <argument
             android:name="extra_playlist"
-            app:argType="io.github.muntashirakon.music.db.PlaylistWithSongs" />
+            app:argType="io.github.muntashirakon.music.data.db.PlaylistWithSongs" />
     </fragment>
 
     <fragment
         android:id="@+id/albumDetailsFragment"
-        android:name="io.github.muntashirakon.music.fragments.albums.AlbumDetailsFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.albums.AlbumDetailsFragment"
         android:label="AlbumDetailsFragment"
         tools:layout="@layout/fragment_album_details">
         <argument
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/artistDetailsFragment"
-        android:name="io.github.muntashirakon.music.fragments.artists.ArtistDetailsFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.artists.ArtistDetailsFragment"
         android:label="ArtistDetailsFragment"
         tools:layout="@layout/fragment_artist_details">
         <argument
@@ -46,13 +46,13 @@
 
     <fragment
         android:id="@+id/libraryFragment"
-        android:name="io.github.muntashirakon.music.fragments.library.LibraryFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.library.LibraryFragment"
         android:label=""
         tools:layout="@layout/fragment_library" />
 
     <fragment
         android:id="@+id/detailListFragment"
-        android:name="io.github.muntashirakon.music.fragments.DetailListFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.DetailListFragment"
         android:label="DetailListFragment">
         <argument
             android:name="type"
@@ -61,55 +61,55 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="io.github.muntashirakon.music.fragments.search.SearchFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.search.SearchFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_search" />
 
     <activity
         android:id="@+id/settingsActivity"
-        android:name="io.github.muntashirakon.music.activities.SettingsActivity"
+        android:name="io.github.muntashirakon.music.ui.activities.SettingsActivity"
         android:label="SettingsActivity" />
 
     <activity
         android:id="@+id/permissionFragment"
-        android:name="io.github.muntashirakon.music.activities.PermissionActivity"
+        android:name="io.github.muntashirakon.music.ui.activities.PermissionActivity"
         android:label="PermissionFragment"
         tools:layout="@layout/activity_permission" />
 
 
     <fragment
         android:id="@+id/action_album"
-        android:name="io.github.muntashirakon.music.fragments.albums.AlbumsFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.albums.AlbumsFragment"
         tools:layout="@layout/fragment_main_activity_recycler_view" />
 
     <fragment
         android:id="@+id/action_artist"
-        android:name="io.github.muntashirakon.music.fragments.artists.ArtistsFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.artists.ArtistsFragment"
         tools:layout="@layout/fragment_main_activity_recycler_view" />
 
     <fragment
         android:id="@+id/action_song"
-        android:name="io.github.muntashirakon.music.fragments.songs.SongsFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.songs.SongsFragment"
         tools:layout="@layout/fragment_main_activity_recycler_view" />
 
     <fragment
         android:id="@+id/action_genre"
-        android:name="io.github.muntashirakon.music.fragments.genres.GenresFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.genres.GenresFragment"
         tools:layout="@layout/fragment_main_activity_recycler_view" />
 
     <fragment
         android:id="@+id/action_playlist"
-        android:name="io.github.muntashirakon.music.fragments.playlists.PlaylistsFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.playlists.PlaylistsFragment"
         tools:layout="@layout/fragment_main_activity_recycler_view" />
 
     <fragment
         android:id="@+id/action_folder"
-        android:name="io.github.muntashirakon.music.fragments.folder.FoldersFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.folder.FoldersFragment"
         tools:layout="@layout/fragment_folder" />
 
     <fragment
         android:id="@+id/action_home"
-        android:name="io.github.muntashirakon.music.fragments.home.HomeFragment"
+        android:name="io.github.muntashirakon.music.ui.fragments.home.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_banner_home" />
 

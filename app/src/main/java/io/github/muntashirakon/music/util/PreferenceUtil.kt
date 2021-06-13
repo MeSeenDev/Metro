@@ -7,20 +7,20 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
 import androidx.viewpager.widget.ViewPager
-import io.github.muntashirakon.music.*
-import io.github.muntashirakon.music.extensions.getIntRes
-import io.github.muntashirakon.music.extensions.getStringOrDefault
-import io.github.muntashirakon.music.fragments.AlbumCoverStyle
-import io.github.muntashirakon.music.fragments.NowPlayingScreen
-import io.github.muntashirakon.music.fragments.folder.FoldersFragment
-import io.github.muntashirakon.music.helper.SortOrder.*
-import io.github.muntashirakon.music.model.CategoryInfo
-import io.github.muntashirakon.music.transform.*
-import io.github.muntashirakon.music.util.theme.ThemeMode
 import com.google.android.material.bottomnavigation.LabelVisibilityMode
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.google.gson.reflect.TypeToken
+import io.github.muntashirakon.music.*
+import io.github.muntashirakon.music.extensions.getIntRes
+import io.github.muntashirakon.music.extensions.getStringOrDefault
+import io.github.muntashirakon.music.model.CategoryInfo
+import io.github.muntashirakon.music.ui.fragments.AlbumCoverStyle
+import io.github.muntashirakon.music.ui.fragments.NowPlayingScreen
+import io.github.muntashirakon.music.ui.fragments.folder.FoldersFragment
+import io.github.muntashirakon.music.ui.transform.*
+import io.github.muntashirakon.music.util.helper.SortOrder.*
+import io.github.muntashirakon.music.util.theme.ThemeMode
 import java.io.File
 
 

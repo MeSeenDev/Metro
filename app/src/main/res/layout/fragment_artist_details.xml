@@ -2,6 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -29,7 +30,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/container"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:overScrollMode="never"
@@ -65,7 +66,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <io.github.muntashirakon.music.views.BaselineGridTextView
+            <io.github.muntashirakon.music.ui.views.BaselineGridTextView
                 android:id="@+id/artistTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -82,7 +83,7 @@
                 tools:ignore="MissingPrefix"
                 tools:text="@tools:sample/full_names" />
 
-            <io.github.muntashirakon.music.views.BaselineGridTextView
+            <io.github.muntashirakon.music.ui.views.BaselineGridTextView
                 android:id="@+id/text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

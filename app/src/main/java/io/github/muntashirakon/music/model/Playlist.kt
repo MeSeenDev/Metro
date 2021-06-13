@@ -2,7 +2,7 @@ package io.github.muntashirakon.music.model
 
 import android.content.Context
 import android.os.Parcelable
-import io.github.muntashirakon.music.repository.RealPlaylistRepository
+import io.github.muntashirakon.music.data.repository.RealPlaylistRepository
 import io.github.muntashirakon.music.util.MusicUtil
 import kotlinx.android.parcel.Parcelize
 import org.koin.core.KoinComponent

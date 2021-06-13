@@ -16,10 +16,12 @@ package io.github.muntashirakon.music
 import androidx.multidex.MultiDexApplication
 import code.name.monkey.appthemehelper.ThemeStore
 import code.name.monkey.appthemehelper.util.VersionUtils
+import dagger.hilt.android.HiltAndroidApp
 import io.github.muntashirakon.music.appshortcuts.DynamicShortcutManager
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
+@HiltAndroidApp
 class App : MultiDexApplication() {
 
     override fun onCreate() {
