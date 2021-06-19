@@ -144,7 +144,11 @@ class SongFileAdapter(
     }
 
     private fun getSectionName(position: Int): String {
-        return MusicUtil.getSectionName(dataSet[position].name)
+        return try {
+            MusicUtil.getSectionName(dataSet[position].name)
+        } catch (ioe: IndexOutOfBoundsException) { // FIXME: 20.06.2021
+            "none"
+        }
     }
 
     inner class ViewHolder(itemView: View) : MediaEntryViewHolder(itemView) {

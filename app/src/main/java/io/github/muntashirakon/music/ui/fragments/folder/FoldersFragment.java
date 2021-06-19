@@ -57,6 +57,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 import code.name.monkey.appthemehelper.ThemeStore;
 import code.name.monkey.appthemehelper.util.ATHUtil;
@@ -111,7 +112,7 @@ public class FoldersFragment extends AbsMainActivityFragment
     private View coordinatorLayout;
     private View empty;
     private TextView emojiText;
-    private Comparator<File> fileComparator =
+    private final Comparator<File> fileComparator =
             (lhs, rhs) -> {
                 if (lhs.isDirectory() && !rhs.isDirectory()) {
                     return -1;
@@ -498,7 +499,7 @@ public class FoldersFragment extends AbsMainActivityFragment
         BreadCrumbLayout.Crumb crumb = getActiveCrumb();
         if (crumb != null) {
             crumb.setScrollPosition(
-                    ((LinearLayoutManager) recyclerView.getLayoutManager()).findFirstVisibleItemPosition());
+                    ((LinearLayoutManager) Objects.requireNonNull(recyclerView.getLayoutManager())).findFirstVisibleItemPosition());
         }
     }
 
@@ -531,7 +532,8 @@ public class FoldersFragment extends AbsMainActivityFragment
 
     private void setUpAdapter() {
         adapter =
-                new SongFileAdapter(getMainActivity(), new LinkedList<>(), R.layout.item_list, this, this);
+                new SongFileAdapter(getMainActivity(),
+                        new LinkedList<>(), R.layout.item_list, this, this);
         adapter.registerAdapterDataObserver(
                 new RecyclerView.AdapterDataObserver() {
                     @Override
@@ -581,7 +583,7 @@ public class FoldersFragment extends AbsMainActivityFragment
     public static class ListPathsAsyncTask
             extends ListingFilesDialogAsyncTask<ListPathsAsyncTask.LoadingInfo, String, String[]> {
 
-        private WeakReference<OnPathsListedCallback> onPathsListedCallbackWeakReference;
+        private final WeakReference<OnPathsListedCallback> onPathsListedCallbackWeakReference;
 
         public ListPathsAsyncTask(Context context, OnPathsListedCallback callback) {
             super(context);

@@ -38,7 +38,6 @@ import io.github.muntashirakon.music.ui.adapter.SearchAdapter
 import io.github.muntashirakon.music.ui.fragments.base.AbsMainActivityFragment
 import kotlinx.android.synthetic.main.fragment_search.*
 import java.util.*
-import kotlin.collections.ArrayList
 
 class SearchFragment : AbsMainActivityFragment(R.layout.fragment_search), TextWatcher {
     companion object {
@@ -82,16 +81,16 @@ class SearchFragment : AbsMainActivityFragment(R.layout.fragment_search), TextWa
         if (savedInstanceState != null) {
             query = savedInstanceState.getString(QUERY)
         }
-        libraryViewModel.getSearchResult().observe(viewLifecycleOwner, {
+        libraryViewModel.getSearchResult().observe(viewLifecycleOwner) {
             showData(it)
-        })
+        }
     }
 
     private fun showData(data: List<Any>) {
         if (data.isNotEmpty()) {
             searchAdapter.swapDataSet(data)
         } else {
-            searchAdapter.swapDataSet(ArrayList())
+            searchAdapter.swapDataSet(listOf())
         }
     }
 
@@ -100,7 +99,9 @@ class SearchFragment : AbsMainActivityFragment(R.layout.fragment_search), TextWa
         searchAdapter.registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
             override fun onChanged() {
                 super.onChanged()
+
                 empty.isVisible = searchAdapter.itemCount < 1
+
                 val height = dipToPix(52f)
                 recyclerView.setPadding(0, 0, 0, height.toInt())
             }
